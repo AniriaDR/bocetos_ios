@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(VistaModeloBasico.self)
-    private var controlador
+    @Environment(VistaModeloBasico.self) private var controlador
+    @State var mostrar_agregar_pantalla: Bool = false
     var body: some View {
-        VStack {
-            ForEach(controlador.series_registradas){ _ in
-                Image(systemName: "plus")
+        if !mostrar_agregar_pantalla{
+            ScrollView{
+                VStack {
+                    ForEach(controlador.series_registradas){ _ in
+                        Image(systemName: "plus")
+                    }
+                }
+                .padding()
+            }
+            
+            Spacer()
+            
+            Button("Agrega serie de prueba"){
+                mostrar_agregar_pantalla = true
             }
         }
-        .padding()
-        
-        Button("Agrega serie de prueba"){
-            controlador.agregar_serie()
+        else{
+            AgregarSerie()
         }
+        
     }
 }
 
