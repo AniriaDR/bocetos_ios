@@ -11,28 +11,20 @@ struct ContentView: View {
     @Environment(VistaModeloBasico.self) private var controlador
     @State var mostrar_agregar_pantalla: Bool = false
     var body: some View {
-        if !mostrar_agregar_pantalla{
-            ScrollView{
-                VStack {
-                    ForEach(controlador.series_registradas){ _ in
-                        Image(systemName: "plus")
-                    }
-                }
-                .padding()
+        if controlador.estado_actual_de_la_aplicacion ==
+            .mostrando_series {
+            MenuPrincipalSeries()
             }
-            
-            Spacer()
-            
-            Button("Agrega serie de prueba"){
-                mostrar_agregar_pantalla = true
-            }
-        }
+        
         else{
             AgregarSerie()
         }
-        
+            
+            
     }
 }
+        
+        
 
 #Preview {
     ContentView()
