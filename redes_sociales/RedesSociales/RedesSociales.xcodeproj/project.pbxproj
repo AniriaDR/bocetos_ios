@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1AA3172D945378009FDDB3 /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA3162D945378009FDDB3 /* controlador_app.swift */; };
+		FB1AA3192D945E8A009FDDB3 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA3182D945E8A009FDDB3 /* publicacion.swift */; };
+		FB1AA31B2D946330009FDDB3 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA31A2D946330009FDDB3 /* comentario.swift */; };
 		FBCEB41E2D91B07400D8A7DA /* RedesSocialesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEB41D2D91B07400D8A7DA /* RedesSocialesApp.swift */; };
 		FBCEB4202D91B07400D8A7DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEB41F2D91B07400D8A7DA /* ContentView.swift */; };
 		FBCEB4222D91B07500D8A7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCEB4212D91B07500D8A7DA /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1AA3162D945378009FDDB3 /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
+		FB1AA3182D945E8A009FDDB3 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
+		FB1AA31A2D946330009FDDB3 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
 		FBCEB41A2D91B07400D8A7DA /* RedesSociales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedesSociales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEB41D2D91B07400D8A7DA /* RedesSocialesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesSocialesApp.swift; sourceTree = "<group>"; };
 		FBCEB41F2D91B07400D8A7DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCEB42E2D91B27400D8A7DA /* Publicacion.swift */,
+				FB1AA31A2D946330009FDDB3 /* comentario.swift */,
 			);
 			path = modelos;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCEB4342D91BC4900D8A7DA /* controdalor_publicaciones.swift */,
+				FB1AA3162D945378009FDDB3 /* controlador_app.swift */,
 			);
 			path = controladores;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCEB4382D91BE2100D8A7DA /* publicaciones_general.swift */,
+				FB1AA3182D945E8A009FDDB3 /* publicacion.swift */,
 			);
 			path = publicaciones;
 			sourceTree = "<group>";
@@ -196,9 +205,12 @@
 				FBCEB4312D91B4A300D8A7DA /* placeholder_api.swift in Sources */,
 				FBCEB42F2D91B27400D8A7DA /* Publicacion.swift in Sources */,
 				FBCEB4202D91B07400D8A7DA /* ContentView.swift in Sources */,
+				FB1AA31B2D946330009FDDB3 /* comentario.swift in Sources */,
+				FB1AA3192D945E8A009FDDB3 /* publicacion.swift in Sources */,
 				FBCEB4352D91BC4900D8A7DA /* controdalor_publicaciones.swift in Sources */,
 				FBCEB41E2D91B07400D8A7DA /* RedesSocialesApp.swift in Sources */,
 				FBCEB4332D91B4B100D8A7DA /* errores.swift in Sources */,
+				FB1AA3172D945378009FDDB3 /* controlador_app.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
