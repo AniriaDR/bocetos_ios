@@ -17,7 +17,7 @@ struct GeneralPublicaciones: View {
                 VStack{
                     ForEach(controlador.publicaciones){ publicacion in
                         NavigationLink{
-                            Text("Miau")
+                            PublicacionVista()
                         } label : {
                             HStack{
                                 Text("\(publicacion.id)")
@@ -25,12 +25,18 @@ struct GeneralPublicaciones: View {
                                     Text("\(publicacion.title)")
                                     Text("\(publicacion.body)")
                                 }
-                            } /*/.onTapGesture {
+                            } 
+                            
+                            /*/.onTapGesture {
                                 //controlador.mostrar_publicacion(publicacion.id)
                                 print("Selecciono: \(publicacion.id)")
                             }*/
                         
                         }
+                        .simultaneousGesture(TapGesture().onEnded(
+                            {
+                                controlador.seleccionar_publicacion(publicacion)
+                            }))
                     }
                 }
             }
