@@ -19,13 +19,31 @@ struct GeneralPublicaciones: View {
                         NavigationLink{
                             PublicacionVista()
                         } label : {
-                            HStack{
-                                Text("\(publicacion.id)")
                                 VStack{
-                                    Text("\(publicacion.title)")
-                                    Text("\(publicacion.body)")
-                                }
-                            } 
+                                    Text("\(publicacion.id)")
+                                        .tint(Color.red)
+                                        .font(.headline)
+                                    Spacer()
+                                        Text("\(publicacion.title)")
+                                        .tint(Color.black)
+                                        .font(.title)
+                                        .bold()
+                                        
+                                    Spacer()
+                                        Text("\(publicacion.body)")
+                                        .tint(Color.gray)
+                                    Spacer()
+                                    
+                                    }
+                            
+                                
+                            .fontDesign(.rounded)
+                            .padding(40)
+                            .background(Color(red: 0.60, green: 0.80, blue: 1))
+                            .cornerRadius(15)
+
+                        
+                             
                             
                             /*/.onTapGesture {
                                 //controlador.mostrar_publicacion(publicacion.id)

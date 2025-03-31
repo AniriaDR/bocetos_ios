@@ -21,6 +21,7 @@
 		FBCEB4392D91BE2100D8A7DA /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEB4382D91BE2100D8A7DA /* publicaciones_general.swift */; };
 		FBEB2D7C2D9700FB0033CC2B /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D7B2D9700FB0033CC2B /* perfil.swift */; };
 		FBEB2D802D9704600033CC2B /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D7F2D9704600033CC2B /* perfil_vista_basica.swift */; };
+		FBFAA2BD2D9AEC6F001E2518 /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFAA2BC2D9AEC6F001E2518 /* menu_aplicacion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FBCEB4382D91BE2100D8A7DA /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
 		FBEB2D7B2D9700FB0033CC2B /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FBEB2D7F2D9704600033CC2B /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
+		FBFAA2BC2D9AEC6F001E2518 /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		FBCEB4362D91BDEC00D8A7DA /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FBFAA2BB2D9AEC08001E2518 /* menu_inicial */,
 				FBEB2D7D2D97043D0033CC2B /* perfil_basico */,
 				FBCEB4372D91BDFA00D8A7DA /* publicaciones */,
 			);
@@ -143,6 +146,14 @@
 				FBEB2D7F2D9704600033CC2B /* perfil_vista_basica.swift */,
 			);
 			path = perfil_basico;
+			sourceTree = "<group>";
+		};
+		FBFAA2BB2D9AEC08001E2518 /* menu_inicial */ = {
+			isa = PBXGroup;
+			children = (
+				FBFAA2BC2D9AEC6F001E2518 /* menu_aplicacion.swift */,
+			);
+			path = menu_inicial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFAA2BD2D9AEC6F001E2518 /* menu_aplicacion.swift in Sources */,
 				FBCEB4392D91BE2100D8A7DA /* publicaciones_general.swift in Sources */,
 				FBCEB4312D91B4A300D8A7DA /* placeholder_api.swift in Sources */,
 				FBEB2D802D9704600033CC2B /* perfil_vista_basica.swift in Sources */,
