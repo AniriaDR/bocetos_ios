@@ -10,6 +10,11 @@
 		FB1AA3172D945378009FDDB3 /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA3162D945378009FDDB3 /* controlador_app.swift */; };
 		FB1AA3192D945E8A009FDDB3 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA3182D945E8A009FDDB3 /* publicacion.swift */; };
 		FB1AA31B2D946330009FDDB3 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA31A2D946330009FDDB3 /* comentario.swift */; };
+		FB2C665C2D9D942700B557FD /* mono_chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C665B2D9D942700B557FD /* mono_chino.swift */; };
+		FB2C665E2D9D966600B557FD /* planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C665D2D9D966600B557FD /* planeta.swift */; };
+		FB2C66602D9D976500B557FD /* transformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C665F2D9D976500B557FD /* transformacion.swift */; };
+		FB2C66622D9D98B700B557FD /* dragonball_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C66612D9D98B700B557FD /* dragonball_api.swift */; };
+		FB2C66652D9D9A8300B557FD /* paginas_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C66642D9D9A8300B557FD /* paginas_resultados.swift */; };
 		FBCEB41E2D91B07400D8A7DA /* RedesSocialesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEB41D2D91B07400D8A7DA /* RedesSocialesApp.swift */; };
 		FBCEB4202D91B07400D8A7DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEB41F2D91B07400D8A7DA /* ContentView.swift */; };
 		FBCEB4222D91B07500D8A7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCEB4212D91B07500D8A7DA /* Assets.xcassets */; };
@@ -28,6 +33,11 @@
 		FB1AA3162D945378009FDDB3 /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FB1AA3182D945E8A009FDDB3 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
 		FB1AA31A2D946330009FDDB3 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
+		FB2C665B2D9D942700B557FD /* mono_chino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mono_chino.swift; sourceTree = "<group>"; };
+		FB2C665D2D9D966600B557FD /* planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeta.swift; sourceTree = "<group>"; };
+		FB2C665F2D9D976500B557FD /* transformacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transformacion.swift; sourceTree = "<group>"; };
+		FB2C66612D9D98B700B557FD /* dragonball_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonball_api.swift; sourceTree = "<group>"; };
+		FB2C66642D9D9A8300B557FD /* paginas_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paginas_resultados.swift; sourceTree = "<group>"; };
 		FBCEB41A2D91B07400D8A7DA /* RedesSociales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedesSociales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEB41D2D91B07400D8A7DA /* RedesSocialesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesSocialesApp.swift; sourceTree = "<group>"; };
 		FBCEB41F2D91B07400D8A7DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +64,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB2C665A2D9D941000B557FD /* dragon_ball */ = {
+			isa = PBXGroup;
+			children = (
+				FB2C66632D9D9A7000B557FD /* soporte */,
+				FB2C665B2D9D942700B557FD /* mono_chino.swift */,
+				FB2C665D2D9D966600B557FD /* planeta.swift */,
+				FB2C665F2D9D976500B557FD /* transformacion.swift */,
+			);
+			path = dragon_ball;
+			sourceTree = "<group>";
+		};
+		FB2C66632D9D9A7000B557FD /* soporte */ = {
+			isa = PBXGroup;
+			children = (
+				FB2C66642D9D9A8300B557FD /* paginas_resultados.swift */,
+			);
+			path = soporte;
+			sourceTree = "<group>";
+		};
 		FBCEB4112D91B07400D8A7DA = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +125,7 @@
 		FBCEB42B2D91B18200D8A7DA /* modelos */ = {
 			isa = PBXGroup;
 			children = (
+				FB2C665A2D9D941000B557FD /* dragon_ball */,
 				FBCEB42E2D91B27400D8A7DA /* Publicacion.swift */,
 				FB1AA31A2D946330009FDDB3 /* comentario.swift */,
 				FBEB2D7B2D9700FB0033CC2B /* perfil.swift */,
@@ -117,6 +147,7 @@
 			children = (
 				FBCEB4302D91B4A300D8A7DA /* placeholder_api.swift */,
 				FBCEB4322D91B4B100D8A7DA /* errores.swift */,
+				FB2C66612D9D98B700B557FD /* dragonball_api.swift */,
 			);
 			path = servicios_API;
 			sourceTree = "<group>";
@@ -231,12 +262,17 @@
 				FBCEB4312D91B4A300D8A7DA /* placeholder_api.swift in Sources */,
 				FBEB2D802D9704600033CC2B /* perfil_vista_basica.swift in Sources */,
 				FBCEB42F2D91B27400D8A7DA /* Publicacion.swift in Sources */,
+				FB2C66602D9D976500B557FD /* transformacion.swift in Sources */,
 				FBEB2D7C2D9700FB0033CC2B /* perfil.swift in Sources */,
 				FBCEB4202D91B07400D8A7DA /* ContentView.swift in Sources */,
+				FB2C66622D9D98B700B557FD /* dragonball_api.swift in Sources */,
 				FB1AA31B2D946330009FDDB3 /* comentario.swift in Sources */,
+				FB2C665C2D9D942700B557FD /* mono_chino.swift in Sources */,
+				FB2C66652D9D9A8300B557FD /* paginas_resultados.swift in Sources */,
 				FB1AA3192D945E8A009FDDB3 /* publicacion.swift in Sources */,
 				FBCEB4352D91BC4900D8A7DA /* controdalor_publicaciones.swift in Sources */,
 				FBCEB41E2D91B07400D8A7DA /* RedesSocialesApp.swift in Sources */,
+				FB2C665E2D9D966600B557FD /* planeta.swift in Sources */,
 				FBCEB4332D91B4B100D8A7DA /* errores.swift in Sources */,
 				FB1AA3172D945378009FDDB3 /* controlador_app.swift in Sources */,
 			);
