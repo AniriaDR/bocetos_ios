@@ -17,6 +17,7 @@ public class ControladorAplicacion{
     var publicacion_seleccionada: Publicacion? = nil
     var perfil_a_mostrar: Perfil? = nil
     
+    var PaginaResultados: PaginaResultado? = nil
     init(){
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
@@ -26,7 +27,8 @@ public class ControladorAplicacion{
     }
     
     func descargar_monos_chinos() async {
-        await print(DragonBallAPI().descargar_pagina_personajes())
+        guard let paginaDescargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_personajes() else { return }
+        self.PaginaResultados = paginaDescargada
     }
     
     func descargar_publicaciones() async {
@@ -34,9 +36,9 @@ public class ControladorAplicacion{
             print("Esta funcion se mando a llamaar desoues de todos los awaits de mi funcion option \(#function)")
         }
         
-        guard let publicaciones_descargadas: [Publicacion] = try? await PlaceHolderAPI().descargar_publicaciones() else { return }
+        guard let publicacionesDescargadas: [Publicacion] = try? await PlaceHolderAPI().descargar_publicaciones() else {return}
         
-        publicaciones = publicaciones_descargadas
+        publicaciones = publicacionesDescargadas
     }
     
     func descargar_comentarios() async {
@@ -56,7 +58,6 @@ public class ControladorAplicacion{
         Task.detached(operation: {
             await self.descargar_comentarios()
         })
-        print("Publicacion \(publicacion_seleccionada)")
     }
     
     func descargar_perfil(id: Int) async -> Void {
