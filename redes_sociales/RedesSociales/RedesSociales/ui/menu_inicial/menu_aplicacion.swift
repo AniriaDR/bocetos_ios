@@ -15,9 +15,17 @@ struct MenuNavegacion: View {
             GeneralPublicaciones()
                 .tabItem { Label("Es esta pantalla", systemImage: "circle") }
                 .badge(controlador.publicaciones.count)
-            
-            Text("Hola foker dos")
-                .tabItem { Label("Otra pantalla", systemImage: "perfil") }
+            PantallaPersonajes()
+                .tabItem { Label {
+                    VStack{
+                        Text("Dragon Ball DB")
+                    }
+                } icon: {
+                    Circle()
+                        .frame(width: 44, height: 44, alignment: .center)
+                        .overlay(Text("JJ Abrahams"))
+                }
+            }
             
             Text("Hola foker tres")
                 .tabItem {

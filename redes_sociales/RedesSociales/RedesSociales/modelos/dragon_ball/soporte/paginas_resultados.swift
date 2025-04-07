@@ -13,7 +13,6 @@ struct Meta: Codable{
 }
 
 struct Enlaces: Codable{
-    let links: String
     let first: String
     let previous: String
     let next: String

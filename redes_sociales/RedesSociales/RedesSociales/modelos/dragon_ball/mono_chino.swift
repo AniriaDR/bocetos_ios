@@ -15,6 +15,8 @@ struct MonoChino: Identifiable, Codable{
         let description: String
         let image: String
         let affiliation: String
-        let originPlanet: Planeta
-        let transformations: [Transformacion]
+    
+        let originPlanet: Planeta?
+    
+        let transformations: [Transformacion]?
 }
