@@ -13,39 +13,51 @@ struct PantallaPersonajes: View {
         if(controlador.pagina_resultados != nil) {
             NavigationStack {
                 ScrollView {
-                    LazyVStack {
+                    LazyVStack(spacing: 16) {
                         ForEach(controlador.pagina_resultados!.items) { personaje in
                             NavigationLink {
-                                PreviewPersonaje()
+                                Text("Hola mundo \(controlador.personaje?.transformations?.count ?? 0)")
                             } label: {
                                 HStack(spacing: 16) {
-                                    Text("El personaje es \(personaje.name)")
-                                        .foregroundColor(.black)
-                                        .font(.headline)
                                     AsyncImage(url: URL(string: personaje.image)) { imagen in
                                         imagen
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width: 50, height: 50)
+                                            .frame(width: 80, height: 80)
                                             .clipShape(RoundedRectangle(cornerRadius: 8))
                                     } placeholder: {
                                         ProgressView()
-                                            .frame(width: 50, height: 50)
-                                            .background(Color.blue.opacity(0.4))
-                                            .clipShape(Circle())
+                                            .frame(width: 60, height: 60)
+                                            .background(Color.pink.opacity(0.2))
+                                            .clipShape(RoundedRectangle(cornerRadius: 8))
                                     }
+                                    Spacer()
+                                    Text(personaje.name)
+                                        .font(.headline)
+                                        //.foregroundColor(.black)
+                                        .lineLimit(1)
+                                        .truncationMode(.tail)
+                                        .tint(Color.pink)
+                                    Spacer()
                                 }
                                 .padding()
-                                .background(Color.blue.opacity(0.1))
+                                .frame(maxWidth: .infinity, minHeight: 80)
+                                .background(Color.pink.opacity(0.3))
                                 .cornerRadius(12)
                             }
+                            .simultaneousGesture(TapGesture().onEnded {
+                                controlador.descargar_informacion_personaje(id: personaje.id)
+                            })
                         }
                     }
                     .padding()
                 }
+                .background(Color.pink.opacity(0.2))
             }
         }
     }
+    
+    
 }
 #Preview {
     PantallaPersonajes()
