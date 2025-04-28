@@ -19,8 +19,14 @@ struct Enlaces: Codable{
     let last: String
 }
 
-struct PaginaResultado: Codable{
+struct PaginaResultado: Codable {
     let items: [MonoChino]
+    let meta: Meta
+    let links: Enlaces
+}
+
+struct PaginaResultadoPlaneta: Codable {
+    let items: [Planeta]
     let meta: Meta
     let links: Enlaces
 }

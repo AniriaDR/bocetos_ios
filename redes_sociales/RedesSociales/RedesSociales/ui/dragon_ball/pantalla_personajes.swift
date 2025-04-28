@@ -16,7 +16,8 @@ struct PantallaPersonajes: View {
                     LazyVStack(spacing: 16) {
                         ForEach(controlador.pagina_resultados!.items) { personaje in
                             NavigationLink {
-                                Text("Hola mundo \(controlador.personaje?.transformations?.count ?? 0)")
+                                Text("El planeta es\(controlador.personaje?.originPlanet?.name)")
+                                AsyncImage(url: URL(string: controlador.personaje?.originPlanet?.image ?? ""))
                             } label: {
                                 HStack(spacing: 16) {
                                     AsyncImage(url: URL(string: personaje.image)) { imagen in
