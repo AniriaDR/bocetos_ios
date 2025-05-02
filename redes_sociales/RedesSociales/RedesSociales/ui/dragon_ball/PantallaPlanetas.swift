@@ -1,24 +1,25 @@
 //
-//  pantalla_personajes.swift
+//  PantallaPlanetas.swift
 //  RedesSociales
 //
-//  Created by alumno on 07/04/25.
+//  Created by alumno on 02/05/25.
 //
 
 import SwiftUI
-struct PantallaPersonajes: View {
+
+struct PantallaPlanetas: View {
     @Environment(ControladorAplicacion.self) var controlador
     var body: some View {
-        if(controlador.pagina_resultados != nil) {
+        if(controlador.pagina_resultados!.items= nil) {
             NavigationStack {
                 ScrollView {
                     LazyVStack(spacing: 16) {
-                        ForEach(controlador.pagina_resultados!.items) { personaje in
+                        ForEach(controlador.pagina_resultados!.items) { planeta in
                             NavigationLink {
-                                PreviewPersonaje(personaje: personaje)
+                                PreviewPlaneta(planeta: planeta)
                             } label: {
                                 HStack(spacing: 16) {
-                                    AsyncImage(url: URL(string: personaje.image)) { imagen in
+                                    AsyncImage(url: URL(string: planeta.image)) { imagen in
                                         imagen
                                             .resizable()
                                             .scaledToFit()
@@ -30,40 +31,38 @@ struct PantallaPersonajes: View {
                                             .background(Color.pink.opacity(0.2))
                                             .clipShape(RoundedRectangle(cornerRadius: 8))
                                     }
-                                    Spacer()
-                                    Text(personaje.name)
-                                        .font(.headline)
-                                        //.foregroundColor(.black)
-                                        .lineLimit(1)
-                                        .truncationMode(.tail)
-                                        .tint(Color.pink)
+                                    VStack(alignment: .leading) {
+                                        Text(planeta.name)
+                                            .font(.headline)
+                                            .foregroundColor(.pink)
+                                        if planeta.isDestroyed {
+                                            Text("Destruido")
+                                                .font(.subheadline)
+                                                .foregroundColor(.red)
+                                        }
+                                    }
                                     Spacer()
                                 }
                                 .padding()
-                                .frame(maxWidth: .infinity, minHeight: 80)
-                                .background(Color.pink.opacity(0.3))
+                                .background(Color.pink.opacity(0.1))
                                 .cornerRadius(12)
                             }
-                            .simultaneousGesture(TapGesture().onEnded {
-                                controlador.descargar_informacion_personaje(id: personaje.id)
-                            })
                         }
                     }
                     .padding()
-                    
                 }
-                .background(Color.pink.opacity(0.2))
-                .tabItem {
-                    Label("Info", systemImage: "person.circle")
-                }
-
-                
+                .background(Color.pink.opacity(0.05))
+                .navigationTitle("Planetas")
             }
+        } else {
+            ProgressView("Cargando planetas...")
+                .onAppear {
+                    controlador.descargar_planetas()
+                }
         }
-            
     }
 }
 #Preview {
-    MenuNavegacion()
+    PantallaPlanetas()
         .environment(ControladorAplicacion())
 }

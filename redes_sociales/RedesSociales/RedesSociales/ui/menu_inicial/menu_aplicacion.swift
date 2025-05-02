@@ -12,9 +12,6 @@ struct MenuNavegacion: View {
     
     var body: some View {
         TabView{
-            GeneralPublicaciones()
-                .tabItem { Label("Es esta pantalla", systemImage: "circle") }
-                .badge(controlador.publicaciones.count)
             PantallaPersonajes()
                 .tabItem { Label {
                     VStack{

@@ -29,6 +29,8 @@
 		FBEB2D7C2D9700FB0033CC2B /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D7B2D9700FB0033CC2B /* perfil.swift */; };
 		FBEB2D802D9704600033CC2B /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D7F2D9704600033CC2B /* perfil_vista_basica.swift */; };
 		FBFAA2BD2D9AEC6F001E2518 /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFAA2BC2D9AEC6F001E2518 /* menu_aplicacion.swift */; };
+		FBFCD7D72DC5259B00A33596 /* PantallaPlanetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFCD7D62DC5259B00A33596 /* PantallaPlanetas.swift */; };
+		FBFCD7D92DC52B3600A33596 /* PreviewPlaneta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFCD7D82DC52B3600A33596 /* PreviewPlaneta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		FBEB2D7B2D9700FB0033CC2B /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FBEB2D7F2D9704600033CC2B /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
 		FBFAA2BC2D9AEC6F001E2518 /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
+		FBFCD7D62DC5259B00A33596 /* PantallaPlanetas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPlanetas.swift; sourceTree = "<group>"; };
+		FBFCD7D82DC52B3600A33596 /* PreviewPlaneta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPlaneta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 			children = (
 				FB515A502DA422E900DAA7D2 /* pantalla_personajes.swift */,
 				FB54BEDC2DC278900075E5DA /* PreviewPersonaje.swift */,
+				FBFCD7D62DC5259B00A33596 /* PantallaPlanetas.swift */,
+				FBFCD7D82DC52B3600A33596 /* PreviewPlaneta.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -273,10 +279,12 @@
 			files = (
 				FBFAA2BD2D9AEC6F001E2518 /* menu_aplicacion.swift in Sources */,
 				FBCEB4392D91BE2100D8A7DA /* publicaciones_general.swift in Sources */,
+				FBFCD7D92DC52B3600A33596 /* PreviewPlaneta.swift in Sources */,
 				FB515A512DA422E900DAA7D2 /* pantalla_personajes.swift in Sources */,
 				FBCEB4312D91B4A300D8A7DA /* placeholder_api.swift in Sources */,
 				FBEB2D802D9704600033CC2B /* perfil_vista_basica.swift in Sources */,
 				FBCEB42F2D91B27400D8A7DA /* Publicacion.swift in Sources */,
+				FBFCD7D72DC5259B00A33596 /* PantallaPlanetas.swift in Sources */,
 				FB54BEDD2DC278900075E5DA /* PreviewPersonaje.swift in Sources */,
 				FB2C66602D9D976500B557FD /* transformacion.swift in Sources */,
 				FBEB2D7C2D9700FB0033CC2B /* perfil.swift in Sources */,

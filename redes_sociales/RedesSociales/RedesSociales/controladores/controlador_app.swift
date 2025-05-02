@@ -87,4 +87,9 @@ public class ControladorAplicacion{
             await self.descargar_perfil(id: id)
         }
     }
+    
+    func descargar_planetas() async {
+        guard let planeta_descargado: PaginaResultadoPlaneta = try? await DragonBallAPI().descargar_pagina_planeta() else { return }
+        self.pagina_resultados = planeta_descargado
+    }
 }
